@@ -92,7 +92,7 @@ Tag similarity is measured using [Weighted Jaccard Similarity](https://en.wikipe
 
 ### Backend
 
-- 홍해담: Responsible for review and comment APIs, integration with external APIs, and push notifications using `Firebase`
+- 홍해담: Implements review and comment APIs, integration with external APIs, and push notifications using `Firebase`
 - 남윤혁: Handles integration with the Vector Database (`Milvus`), and implements search and recommendation algorithms using the vector DB
 - 박진성: In charge of user authentication (`Spring Security + JWT`), deployment environment setup (`Docker + AWS EC2`), and CI/CD pipeline using `GitHub Actions`
 
