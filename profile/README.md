@@ -14,6 +14,42 @@ When a student explains what they’ve studied to the AI, the AI provides feedba
 
 <img src="https://i.imgur.com/mnfWKYE.png" width="720" />
 
+The user explains what they are currently studying about with Tokkit Android application. `llama3-3b` model is **fully running On-Device mode**. No network API calls for external AI models. (* Devices with supported chipset(`e.g. Galaxy S25`)) only)
+
+During the conversation session, Tokkit responds to the user giving some feedback on the user's explanation. `llama3-3b` is used here.
+
+After the session, the summary note is generated with a Markdown format, based on the session's data. `llama3-3b` is used here as well.
+
+If the user agrees to share the generated note with other users, the note will be uploaded to the server. The note will be processed and saved to the vector database.
+
+When the user wants to search other users' notes(*sharing your knowledge is good!*), vector database is used to fetch the search results.
+
+## 🧰 Technologies
+
+### Frontend
+
+- Languages / Frameworks
+  - Kotlin
+  - Android SDK
+  - Genie SDK(C++)
+- Tools
+  - Android Studio
+  - [Qualcomm AI Hub](https://aihub.qualcomm.com/)
+  - Firebase - Mobile push notifications
+
+ ### Backend
+
+- Languages / Frameworks
+  - Spring Boot 6 /w RESTful API
+  - Spring Security /w JWT Authentication
+  - JDK 21
+  - MySQL - Relational Database
+  - Milvus - Vector Database
+  - Redish - Cache Storage
+ - Tools
+   - IntelliJ IDEA
+   - Docker
+
 ## 📝 Implementation Details
 
 ### Frontend
@@ -29,6 +65,21 @@ When a student explains what they’ve studied to the AI, the AI provides feedba
 2. Keyword search and *'Find similar notes with this note'* search is implemented using Vector Database's vector field search
 3. Recommended note for each user(just like YouTube home feed) is implemented through calculating the user's interest vector, then search the Vector Database with the vector.
 
+## 📖 Recommended Notes algorithm
+
+![image](https://github.com/user-attachments/assets/acb00670-9ad9-459e-b5cb-46ca3b9e0687)
+
+The user's interests are represented by the **mean vector of all note embeddings** they have created.
+
+---
+
+![image](https://github.com/user-attachments/assets/03f902b0-f828-4cea-abd8-6043410d5bff)
+
+To generate recommendations, the mean vector of a user's note embeddings is used to perform a similarity search against other notes stored in the vector database.
+
+The retrieved results are subsequently re-ranked based on **tag relevance**. A user's tag frequency distribution serves as an indicator of current interests—notes that share more tags with higher frequency in the user's tag map are considered more relevant. 
+
+Tag similarity is measured using [Weighted Jaccard Similarity](https://en.wikipedia.org/wiki/Jaccard_index#Weighted_Jaccard_similarity_and_distance), which accounts for both the presence and frequency of tags. This ensures that notes containing commonly used tags by the user are given higher priority in the final recommendation list.
 
 ## 🍟 Team - OGAMJA
 
