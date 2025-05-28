@@ -20,6 +20,8 @@ During the conversation session, Tokkit responds to the user giving some feedbac
 
 After the session, the summary note is generated with a Markdown format, based on the session's data. `llama3-3b` is used here as well.
 
+The banner images of the note are created Stable Diffusion 2.1 model, also running On-Device.
+
 If the user agrees to share the generated note with other users, the note will be uploaded to the server. The note will be processed and saved to the vector database.
 
 When the user wants to search other users' notes(*sharing your knowledge is good!*), vector database is used to fetch the search results.
@@ -36,6 +38,9 @@ When the user wants to search other users' notes(*sharing your knowledge is good
   - Android Studio
   - [Qualcomm AI Hub](https://aihub.qualcomm.com/)
   - Firebase - Mobile push notifications
+- Models
+  - llama 3.2:3B
+  - Stable Diffusion 2.1
 
  ### Backend
 
@@ -49,6 +54,12 @@ When the user wants to search other users' notes(*sharing your knowledge is good
  - Tools
    - IntelliJ IDEA
    - Docker
+ - Models(API)
+   - text-embedding-ada-002(Embedding)
+   - GPT 4o Mini TTS(Lecture audio generation)
+   - GPT 4.1 Mini(Quiz generation)
+   - GPT 3.5 Turbo(Translation KR->EN)
+   - Clova OCR
 
 ## 📝 Implementation Details
 
