@@ -38,7 +38,7 @@ When the user wants to search other users' notes(*sharing your knowledge is good
   - Android Studio
   - [Qualcomm AI Hub](https://aihub.qualcomm.com/)
   - Firebase - Mobile push notifications
-- Models
+- Models(from Qualcomm AI Hub)
   - llama 3.2:3B
   - Stable Diffusion 2.1
 
