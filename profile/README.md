@@ -12,7 +12,7 @@ When a student explains what they’ve studied to the AI, the AI provides feedba
 
 ## 🔧 Architecture
 
-<img src="https://i.imgur.com/mnfWKYE.png" width="720" />
+![image](https://github.com/user-attachments/assets/37d88e23-ede6-49f1-8c71-0060fa6f2de9)
 
 The user explains what they are currently studying about with Tokkit Android application. `llama3-3b` model is **fully running On-Device mode**. No network API calls for external AI models. (* Devices with supported chipset(`e.g. Galaxy S25`)) only)
 
