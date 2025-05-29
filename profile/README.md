@@ -116,4 +116,6 @@ Tag similarity is measured using [Weighted Jaccard Similarity](https://en.wikipe
 
 [![Tokkit Demo](https://img.youtube.com/vi/U1QxSzgBspc/0.jpg)](https://www.youtube.com/watch?v=U1QxSzgBspc)
 
+> 📺 Click the image above to watch the YouTube demo — see how Tokkit helps learners turn their spoken explanations into structured, review-ready notes, all powered by on-device AI.
+
 
