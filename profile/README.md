@@ -111,3 +111,9 @@ Tag similarity is measured using [Weighted Jaccard Similarity](https://en.wikipe
 
 - 임차민: Designs and implements UI/UX for notes and conversations, and ports on-device models via `Qualcomm AI Hub`
 - 최승재: Designs and implements UI/UX for home and review pages, and ports on-device models via `Qualcomm AI Hub`
+
+## 🎞️ Demo Video
+
+[![Tokkit Demo](https://img.youtube.com/vi/U1QxSzgBspc/0.jpg)](https://www.youtube.com/watch?v=U1QxSzgBspc)
+
+
