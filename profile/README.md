@@ -1,4 +1,4 @@
-# Tokkit - AI Assited, Interactive Learning Helper
+# Tokkit - AI Asisted, Interactive Learning Helper
 
 <img width="960" alt="Group 1948755841" src="https://github.com/user-attachments/assets/993ee15e-0c24-48e8-9bad-3bd8ea08e637" />
 
